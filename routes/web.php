@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    echo "<h1>hola mundo<h1>";
     return view('welcome');
+});
+Route::get('/custom', function () {
+    $msj = "mensaje desde la ruta :3";
+    $data = ['msj' => $msj];
+    return view('custom', $data);
 });
